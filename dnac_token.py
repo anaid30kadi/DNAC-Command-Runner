@@ -11,7 +11,7 @@ def get_auth_token():
         url = 'https://{}/dna/system/api/v1/auth/token'.format(DNAC_IP)       # Endpoint URL
         resp = requests.post(url, verify=False, auth=HTTPBasicAuth(DNAC_USER, DNAC_PASSWORD))  # Make the POST Request
         token = resp.json()['Token']    # Retrieve the Token from the returned JSON
-        print('Token Retrieved: {}'.format(token))  # Print out the Token
+        #print('Token Retrieved: {}'.format(token))  # Print out the Token
         return token
 
     except (requests.ConnectionError, TimeoutError):
